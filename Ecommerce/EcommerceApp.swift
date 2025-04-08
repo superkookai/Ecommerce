@@ -9,9 +9,31 @@ import SwiftUI
 
 @main
 struct EcommerceApp: App {
+    @State private var favoriteManager = FavoriteManager()
+    @State private var cartManager = CartManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                
+                CartView()
+                    .tabItem {
+                        Label("Cart", systemImage: "cart.fill")
+                    }
+                
+                FavoriteView()
+                    .tabItem {
+                        Label("Favorite", systemImage: "heart.fill")
+                    }
+            }
+            .environment(favoriteManager)
+            .environment(cartManager)
+            .preferredColorScheme(.light)
+            .tint(.black)
         }
     }
 }

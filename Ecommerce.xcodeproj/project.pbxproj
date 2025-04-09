@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1253B02DA6046500F61EC6 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1253AF2DA6046500F61EC6 /* TabManager.swift */; };
+		EF1253B22DA60EFD00F61EC6 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1253B12DA60EFD00F61EC6 /* PaymentButton.swift */; };
+		EF1253B52DA6141600F61EC6 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1253B42DA6141600F61EC6 /* PaymentService.swift */; };
 		EF3576402DA4C3BE001671B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF35763A2DA4C3BE001671B0 /* Preview Assets.xcassets */; };
 		EF3576412DA4C3BE001671B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF35763C2DA4C3BE001671B0 /* Assets.xcassets */; };
 		EF3576422DA4C3BE001671B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35763D2DA4C3BE001671B0 /* HomeView.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF1253AF2DA6046500F61EC6 /* TabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
+		EF1253B12DA60EFD00F61EC6 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		EF1253B42DA6141600F61EC6 /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
 		EF3576292DA4C3B5001671B0 /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF35763A2DA4C3BE001671B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF35763C2DA4C3BE001671B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF1253B32DA613FE00F61EC6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF1253B42DA6141600F61EC6 /* PaymentService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		EF3576202DA4C3B5001671B0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +109,7 @@
 		EF35763F2DA4C3BE001671B0 /* Ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				EF1253B32DA613FE00F61EC6 /* Service */,
 				EF3576672DA4FBFB001671B0 /* Manager */,
 				EF3576522DA4D03C001671B0 /* ViewModel */,
 				EF35764D2DA4C83B001671B0 /* Component */,
@@ -147,6 +162,7 @@
 				EF3576552DA4D44D001671B0 /* ProductRow.swift */,
 				EF3576592DA4DA65001671B0 /* PrimaryButtonStyle.swift */,
 				EF35765D2DA4DFAB001671B0 /* TwoColumnGrid.swift */,
+				EF1253B12DA60EFD00F61EC6 /* PaymentButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 			children = (
 				EF3576652DA4F0FE001671B0 /* FavoriteManager.swift */,
 				EF3576682DA4FC23001671B0 /* CartManager.swift */,
+				EF1253AF2DA6046500F61EC6 /* TabManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -246,8 +263,10 @@
 				EF3576692DA4FC23001671B0 /* CartManager.swift in Sources */,
 				EF3576422DA4C3BE001671B0 /* HomeView.swift in Sources */,
 				EF3576582DA4D671001671B0 /* ProductFilter.swift in Sources */,
+				EF1253B22DA60EFD00F61EC6 /* PaymentButton.swift in Sources */,
 				EF3576432DA4C3BE001671B0 /* EcommerceApp.swift in Sources */,
 				EF3576542DA4D050001671B0 /* HomeViewModel.swift in Sources */,
+				EF1253B02DA6046500F61EC6 /* TabManager.swift in Sources */,
 				EF35766B2DA4FDE2001671B0 /* SquareImageModifier.swift in Sources */,
 				EF35765E2DA4DFAB001671B0 /* TwoColumnGrid.swift in Sources */,
 				EF35764B2DA4C465001671B0 /* ProductsClient.swift in Sources */,
@@ -261,6 +280,7 @@
 				EF3576512DA4C9EC001671B0 /* ProductGridView.swift in Sources */,
 				EF3576642DA4EF2D001671B0 /* FavoriteView.swift in Sources */,
 				EF3576662DA4F0FE001671B0 /* FavoriteManager.swift in Sources */,
+				EF1253B52DA6141600F61EC6 /* PaymentService.swift in Sources */,
 				EF35764F2DA4C859001671B0 /* BannerImageModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

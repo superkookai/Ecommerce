@@ -31,6 +31,7 @@ struct ProductDetailView: View {
                     
                     Button {
                         manager.addToCart(product: product)
+                        manager.alertAddToCart = true
                     } label: {
                         Text("Add to Cart")
                     }

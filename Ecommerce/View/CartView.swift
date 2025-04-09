@@ -18,6 +18,31 @@ struct CartView: View {
                 }
             }
             .listStyle(.plain)
+            
+            VStack {
+                Divider()
+                
+                HStack {
+                    Text("Total: \(manager.numberOfProductsInCart) items")
+                        .font(.system(size: 16))
+                    
+                    Spacer()
+                    
+                    Text(manager.displayTotalCartPrices)
+                        .font(.system(size: 16, weight: .bold))
+                    
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 30)
+                .padding(.top, 10)
+                
+                PaymentButton(action: {
+                    manager.pay()
+                })
+                .frame(height: 40)
+                .padding(.horizontal)
+                .padding(.bottom, 30)
+            }
         }
     }
 }
@@ -29,6 +54,7 @@ struct CartView: View {
 
 struct CartProductRow: View {
     var productInCart: ProductInCart
+    @Environment(CartManager.self) var manager: CartManager
     
     var body: some View {
         HStack {
@@ -45,8 +71,10 @@ struct CartProductRow: View {
                 
                 Stepper("Quantity \(productInCart.quantity)") {
                     //Increment
+                    manager.addToCart(product: productInCart.product)
                 } onDecrement: {
                     //Decrement
+                    manager.removeFromCart(product: productInCart.product)
                 }
             }
         }
@@ -55,4 +83,5 @@ struct CartProductRow: View {
 
 #Preview("CartProductRow") {
     CartProductRow(productInCart: ProductInCart(product: Product.previewProduct, quantity: 2))
+        .environment(CartManager())
 }

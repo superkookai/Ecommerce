@@ -12,6 +12,7 @@ import SwiftUI
 class CartManager {
     var productsInCart: [ProductInCart] = []
     var alertAddToCart = false
+    let paymentService = PaymentService()
     
     var numberOfProductsInCart: Int {
 //        productsInCart.reduce(into: 0, {$0 += $1.quantity})
@@ -47,6 +48,11 @@ class CartManager {
     }
     
     func pay() {
-        
+        guard self.productsInCart.count > 0 else { return }
+        paymentService.startPayment(productsInCart: self.productsInCart) { success in
+            if success {
+                self.productsInCart.removeAll()
+            }
+        }
     }
 }
